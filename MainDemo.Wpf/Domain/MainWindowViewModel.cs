@@ -33,21 +33,42 @@ namespace MaterialDesignColors.WpfExample.Domain
                         DocumentationLink.DemoPageLink<PaletteSelectorViewModel>("Demo View Model"),
                         DocumentationLink.ApiLink<PaletteHelper>()
                     }),
-                new DemoItem("Buttons & Toggles", new Buttons { DataContext = new ButtonsViewModel() } ,
+                new DemoItem("Color Tool", new ColorTool { DataContext = new ColorToolViewModel() },
+                    new []
+                    {
+                        DocumentationLink.WikiLink("Brush-Names", "Brushes"),
+                        DocumentationLink.WikiLink("Custom-Palette-Hues", "Custom Palettes"),
+                        DocumentationLink.WikiLink("Swatches-and-Recommended-Colors", "Swatches"),
+                        DocumentationLink.DemoPageLink<PaletteSelector>("Demo View"),
+                        DocumentationLink.DemoPageLink<PaletteSelectorViewModel>("Demo View Model"),
+                        DocumentationLink.ApiLink<PaletteHelper>()
+                    }),
+                new DemoItem("Buttons", new Buttons { DataContext = new ButtonsViewModel() } ,
                     new []
                     {
                         DocumentationLink.WikiLink("Button-Styles", "Buttons"),
                         DocumentationLink.DemoPageLink<Buttons>("Demo View"),
                         DocumentationLink.DemoPageLink<ButtonsViewModel>("Demo View Model"),
                         DocumentationLink.StyleLink("Button"),
-                        DocumentationLink.StyleLink("CheckBox"),
                         DocumentationLink.StyleLink("PopupBox"),
-                        DocumentationLink.StyleLink("ToggleButton"),
                         DocumentationLink.ApiLink<PopupBox>()
                     })
                     {
                         VerticalScrollBarVisibilityRequirement = ScrollBarVisibility.Auto
                     },
+                new DemoItem("Toggles", new Toggles(), new []
+                {
+                    DocumentationLink.DemoPageLink<Toggles>(),
+                    DocumentationLink.StyleLink("ToggleButton"),
+                    DocumentationLink.StyleLink("CheckBox"),
+                    DocumentationLink.ApiLink<Toggles>()
+                }),
+                new DemoItem("Rating Bar", new RatingBar(), new []
+                {
+                    DocumentationLink.DemoPageLink<RatingBar>(),
+                    DocumentationLink.StyleLink("RatingBar"),
+                    DocumentationLink.ApiLink<RatingBar>()
+                }),
                 new DemoItem("Fields", new TextFields(),
                     new []
                     {
